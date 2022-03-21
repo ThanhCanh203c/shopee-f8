@@ -1,0 +1,135 @@
+/* Mobile & Tablet */
+@media (max-width: 1023px) {
+    :root {
+        --header-height: 68px;
+        --navbar-height: 0px;
+    }
+
+    .hide-on-mobile-tablet {
+        display: none;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .header__cart-list {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2);
+    }
+
+    .header__cart-list::before {
+        display: none;
+    }
+
+    .header__cart-item-remove {
+        display: none;
+    }
+
+    .header__cart-item-remove-icon {
+        display: block;
+        font-size: 1.6rem;
+        color: #bbb;
+    }
+
+    .app__container {
+        margin-top: calc(var(--header-height) + var(--header-sort-bar-height));
+    }
+
+    .header__sort-bar {
+        display: flex;
+    }
+
+    .app__content {
+        padding-top: 0;
+    }
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .hide-on-tablet {
+        display: none;
+    }
+
+    .header__cart {
+        width: 80px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+    .hide-on-mobile {
+        display: none;
+    }
+
+    .header-with-search {
+        justify-content: space-between;
+    }
+
+    .header__mobile-btn {
+        display: block;
+    }
+
+    .header__logo,
+    .header__cart {
+        width: unset;
+    }
+
+    .header__logo {
+        transform: scale(0.7);
+        margin-left: -16px;
+    }
+
+    .header__sort-bar {
+        box-shadow: none;
+    }
+    
+    .header__search {
+        position: fixed;
+        top: calc(var(--header-height) + var(--header-sort-bar-height));
+        height: 46px;
+        left: 0;
+        right: 0;
+        padding: 0 16px;
+        box-shadow: 0 0 4px rgb(184, 184, 184);
+        animation: mobileSlideIn ease .3s;
+        display: none;
+    }
+
+    .mobile__menu {
+        animation: mobileSlideIn ease .3s;
+    }
+
+    @keyframes mobileSlideIn {
+        from {
+            opacity: .7;
+            transform: translateX(-100%);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .app__content {
+        margin: 0 4px;
+    }
+
+    .pagination-item {
+        margin: 0 2px;
+    }
+
+    .pagination-item-link {
+        --height: 28px;
+        font-size: 1.6rem;
+        min-width: 36px;
+    }
+
+}
