@@ -249,7 +249,7 @@
     transform-origin: right top;
     animation: headerNotifyGrowth ease .25s;
     display: none;
-    will-change: opacity transform;
+    will-change: opacity, transform;
     border-radius: 3px;
 }
 
