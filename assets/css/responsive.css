@@ -83,6 +83,7 @@
 
     .header__mobile-btn {
         display: block;
+        width: 43px;
     }
 
     .header__logo,
@@ -107,23 +108,19 @@
         right: 0;
         padding: 0 16px;
         box-shadow: 0 0 4px rgb(184, 184, 184);
-        animation: mobileSlideIn ease .3s;
+        animation: mobileSlideInTop ease .3s;
         display: none;
     }
 
-    .mobile__menu {
-        animation: mobileSlideIn ease .3s;
-    }
-
-    @keyframes mobileSlideIn {
+    @keyframes mobileSlideInTop {
         from {
             opacity: .7;
-            transform: translateX(-100%);
+            transform: translateY(-100%);
         }
 
         to {
             opacity: 1;
-            transform: translateX(0);
+            transform: translateY(0);
         }
     }
 
@@ -150,12 +147,8 @@
         padding: 0 16px;
     }
 
-    .footer__heading {
-        text-align: center;
-    }
-
-    .footer-item__link {
-        justify-content: center;
+    .footer__download-qr {
+        margin-right: 4px;
     }
 
     .footer__download-apps-img {

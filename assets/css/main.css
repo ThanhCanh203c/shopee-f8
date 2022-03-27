@@ -615,14 +615,12 @@
     display: none;
 }
 
-.header__mobile-search,
-.header__mobile-menu {
+.header__mobile-search{
     padding: 0 8px;
 }
 
-.header__mobile-search-icon,
-.header__mobile-menu {
-    font-size: 1.8rem;
+.header__mobile-search-icon {
+    font-size: 2.2rem;
     color: var(--white-color);
 }
 
@@ -797,6 +795,7 @@
     border-radius: 2px;
     display: none;
     animation: fadeIn ease-in .2s;
+    z-index: 1;
 }
 
 .header__search-option::after {
@@ -881,6 +880,7 @@
     box-shadow: 0 1px 5px rgba(189 189 189);
     overflow: hidden;
     display: none;
+    z-index: 1;
 }
 
 .header__search-history-heading {
